@@ -15,12 +15,15 @@ namespace jun1
         {
             int[] array = new int[10];
             Random random = new Random();
+            int minimalRandomNumber = 1;
+            int maximalRandomNumber = 10;
             int temp;
 
             for (int i = 0; i < array.Length; i++)
             {
-                array[i] = random.Next(1, 10);
+                array[i] = random.Next(minimalRandomNumber, maximalRandomNumber);
             }
+            
             for (int i = 0; i < array.Length; i++)
             {
                 for (int j = 0; j < array.Length - 1; j++)
@@ -33,6 +36,7 @@ namespace jun1
                     }
                 }
             }
+
             for (int i = 0; i < array.Length; i++)
             {
                 Console.Write(array[i] + " ");
